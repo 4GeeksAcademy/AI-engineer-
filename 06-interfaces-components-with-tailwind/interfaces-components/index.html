@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- SEO: Título optimizado (ideal entre 50 y 60 caracteres) -->
+  <title>Práctica en vivo de CSS: Flexbox, Grid y Modelo de Caja | Nexo IA</title>
+  
+  <!-- SEO: Descripción clara orientada a intención de búsqueda -->
+  <meta name="description" content="Laboratorio interactivo de interfaces web. Aprende y practica CSS Grid, Flexbox y el modelo de caja con ejemplos prácticos de desarrollo frontend.">
+  
+  <!-- SEO / GEO: Autor y palabras clave secundarias -->
+  <meta name="author" content="Nexo IA">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical para evitar contenido duplicado -->
+  <link rel="canonical" href="https://tudominio.com/practica-flexbox-grid">
+
+  <!-- Open Graph (SEO Social: LinkedIn, Twitter, WhatsApp, etc.) -->
+  <meta property="og:title" content="Práctica en vivo de CSS: Flexbox, Grid y Modelo de Caja">
+  <meta property="og:description" content="Aprende a ordenar elementos, controlar espacios y adaptar interfaces con Flexbox y CSS Grid.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tudominio.com/practica-flexbox-grid">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Favicon (Esencial para SEO técnico y experiencia de usuario) -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Práctica en vivo: Flexbox, Grid y Tailwind CSS</title>
+
+  <!-- Tailwind CSS v4 Play CDN: práctico para aprender, no para producción. -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen bg-slate-50 font-sans text-slate-900 antialiased">
+  <!-- FLEXBOX: logo a la izquierda, enlaces en el centro y botón a la derecha. -->
+  <header class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 bg-white px-6 py-4 lg:px-12">
+    <a class="shrink-0 text-2xl font-extrabold tracking-tight" href="#" aria-label="Inicio de Nexo IA">
+      Nexo<span class="text-violet-600">IA</span>
+    </a>
+
+    <nav class="order-3 flex w-full flex-wrap items-center gap-5 text-sm text-slate-600 md:order-none md:w-auto md:justify-center" aria-label="Navegación principal">
+      <a class="hover:text-violet-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600" href="#modelos">Modelos</a>
+      <a class="hover:text-violet-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600" href="#respuesta">Ejemplo</a>
+      <a class="hover:text-violet-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600" href="#practica">Práctica</a>
+    </nav>
+
+    <button class="shrink-0 rounded-xl bg-violet-600 px-4 py-2.5 font-semibold text-white transition hover:bg-violet-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600" type="button">
+      Entrar
+    </button>
+  </header>
+
+  <main class="mx-auto w-[min(1120px,calc(100%-2rem))]">
+    <section class="max-w-2xl py-12 md:py-16" aria-labelledby="page-title">
+      <p class="mb-3 text-xs font-extrabold tracking-[0.18em] text-violet-700">LABORATORIO DE INTERFACES</p>
+      <h1 id="page-title" class="mb-4 text-4xl font-extrabold leading-tight tracking-tight md:text-6xl">
+        De las cajas al diseño
+      </h1>
+      <p class="max-w-xl text-lg leading-8 text-slate-600">
+        Aprende a distribuir elementos, controlar el espacio y adaptar una interfaz
+        con HTML y clases de utilidad de Tailwind CSS.
+      </p>
+    </section>
+
+    <!-- GRID: una columna en móvil, dos en pantallas medianas y tres en grandes. -->
+    <section id="modelos" class="pb-14" aria-labelledby="models-title">
+      <div class="mb-5 flex items-end justify-between gap-4">
+        <div>
+          <p class="mb-2 text-xs font-extrabold tracking-[0.18em] text-violet-700">GRID</p>
+          <h2 id="models-title" class="text-2xl font-bold tracking-tight md:text-3xl">Explora los modelos</h2>
+        </div>
+        <span class="text-sm text-slate-500">6 modelos</span>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <span class="mb-4 grid size-11 place-items-center rounded-xl bg-violet-100 font-extrabold text-violet-700">A</span>
+          <h3 class="mb-2 text-lg font-bold">Modelo Atlas</h3>
+          <p class="mb-5 text-sm leading-6 text-slate-600">Bueno para resumir información extensa.</p>
+          <a class="font-semibold text-violet-700 hover:text-violet-900" href="#respuesta">Ver ejemplo <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <span class="mb-4 grid size-11 place-items-center rounded-xl bg-sky-100 font-extrabold text-sky-700">B</span>
+          <h3 class="mb-2 text-lg font-bold">Modelo Brisa</h3>
+          <p class="mb-5 text-sm leading-6 text-slate-600">Útil para explorar ideas y alternativas.</p>
+          <a class="font-semibold text-violet-700 hover:text-violet-900" href="#respuesta">Ver ejemplo <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <span class="mb-4 grid size-11 place-items-center rounded-xl bg-emerald-100 font-extrabold text-emerald-700">C</span>
+          <h3 class="mb-2 text-lg font-bold">Modelo Cauce</h3>
+          <p class="mb-5 text-sm leading-6 text-slate-600">Ayuda a organizar tareas paso a paso.</p>
+          <a class="font-semibold text-violet-700 hover:text-violet-900" href="#respuesta">Ver ejemplo <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <span class="mb-4 grid size-11 place-items-center rounded-xl bg-orange-100 font-extrabold text-orange-700">D</span>
+          <h3 class="mb-2 text-lg font-bold">Modelo Delta</h3>
+          <p class="mb-5 text-sm leading-6 text-slate-600">Propone borradores y primeras versiones.</p>
+          <a class="font-semibold text-violet-700 hover:text-violet-900" href="#respuesta">Ver ejemplo <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <span class="mb-4 grid size-11 place-items-center rounded-xl bg-pink-100 font-extrabold text-pink-700">E</span>
+          <h3 class="mb-2 text-lg font-bold">Modelo Eco</h3>
+          <p class="mb-5 text-sm leading-6 text-slate-600">Convierte notas en listas estructuradas.</p>
+          <a class="font-semibold text-violet-700 hover:text-violet-900" href="#respuesta">Ver ejemplo <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <span class="mb-4 grid size-11 place-items-center rounded-xl bg-amber-100 font-extrabold text-amber-800">F</span>
+          <h3 class="mb-2 text-lg font-bold">Modelo Faro</h3>
+          <p class="mb-5 text-sm leading-6 text-slate-600">Explica conceptos con ejemplos simples.</p>
+          <a class="font-semibold text-violet-700 hover:text-violet-900" href="#respuesta">Ver ejemplo <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- BOX MODEL + FLEXBOX: el padding está aplicado directamente con Tailwind. -->
+    <section id="respuesta" class="pb-14" aria-labelledby="response-title">
+      <div class="mb-5 flex items-end justify-between gap-4">
+        <div>
+          <p class="mb-2 text-xs font-extrabold tracking-[0.18em] text-violet-700">FLEXBOX + MODELO DE CAJA</p>
+          <h2 id="response-title" class="text-2xl font-bold tracking-tight md:text-3xl">Una respuesta del asistente</h2>
+        </div>
+        <span class="inline-flex items-center gap-2 rounded-full bg-emerald-100 px-3 py-1.5 text-sm font-medium text-emerald-800">
+          <span class="size-2 rounded-full bg-emerald-500"></span> Demo
+        </span>
+      </div>
+
+      <article class="mx-auto w-full max-w-3xl rounded-3xl border border-slate-200 bg-white p-5 shadow-md sm:p-7">
+        <header class="flex items-center justify-between gap-4 border-b border-slate-200 pb-5">
+          <div class="flex min-w-0 items-center gap-3">
+            <span class="grid size-11 shrink-0 place-items-center rounded-2xl bg-violet-600 font-extrabold text-white" aria-hidden="true">N</span>
+            <div class="min-w-0">
+              <h3 class="font-bold">Asistente</h3>
+              <p class="text-sm text-slate-500">Modelo Faro · Versión 1</p>
+            </div>
+          </div>
+          <button class="rounded-lg px-3 py-2 text-slate-500 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-violet-600" type="button" aria-label="Más opciones">•••</button>
+        </header>
+
+        <div class="py-6">
+          <p class="mb-2 text-xs font-extrabold tracking-widest text-slate-500">TU PREGUNTA</p>
+          <p class="mb-4 text-lg font-bold">¿Qué es una API?</p>
+          <p class="leading-8 text-slate-700">
+            Una API es un conjunto de reglas que permite que dos programas se comuniquen.
+            Por ejemplo, una aplicación puede pedir datos a otro servicio sin necesitar
+            conocer cómo está construido por dentro.
+          </p>
+        </div>
+
+        <footer class="flex flex-col justify-between gap-4 border-t border-slate-200 pt-5 sm:flex-row sm:items-center">
+          <p class="text-sm text-slate-500">¿Te resultó útil esta respuesta?</p>
+          <div class="flex flex-wrap gap-3">
+            <button class="rounded-xl bg-violet-600 px-4 py-2.5 font-semibold text-white transition hover:bg-violet-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600" type="button">Copiar</button>
+            <button class="rounded-xl border border-slate-300 bg-white px-4 py-2.5 font-semibold text-slate-700 transition hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600" type="button">Regenerar</button>
+          </div>
+        </footer>
+      </article>
+    </section>
+
+    <section id="practica" class="mb-14 flex items-start gap-4 rounded-2xl border border-violet-200 bg-violet-50 p-5 sm:items-center sm:p-7" aria-labelledby="practice-title">
+      <span class="grid size-12 shrink-0 place-items-center rounded-2xl bg-white text-2xl text-violet-700" aria-hidden="true">✦</span>
+      <div>
+        <p class="mb-2 text-xs font-extrabold tracking-[0.18em] text-violet-700">TU TURNO</p>
+        <h2 id="practice-title" class="mb-2 text-xl font-bold">Predice antes de cambiar</h2>
+        <p class="leading-7 text-violet-950/80">Modifica una sola clase en el HTML. Antes de guardar, explica qué crees que va a pasar y después comprueba tu predicción.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white px-6 py-6 text-center text-sm text-slate-500">
+    Práctica de HTML y Tailwind CSS · Flexbox, Grid, box model y responsive
+  </footer>
+</body>
+</html>
