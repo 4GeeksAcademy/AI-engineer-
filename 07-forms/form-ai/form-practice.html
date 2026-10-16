@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica: Estilos y Estados en Tailwind</title>
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center p-4">
+
+  <div class="w-full max-w-xl bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl">
+    <header class="mb-6">
+      <h1 class="text-2xl font-bold tracking-tight text-white">Práctica: Formulario Estilizado</h1>
+      <p class="text-sm text-slate-400 mt-1">Aplica las clases de Tailwind para estructurar la grilla y manejar los estados visuales.</p>
+    </header>
+
+    <!-- TODO: Aplica una grilla responsiva: 1 columna por defecto, 2 columnas desde pantallas md, con separador de espacio (gap-4) -->
+    <form class="">
+      
+      <!-- Nombre -->
+      <div>
+        <label for="first-name" class="block text-sm font-medium text-slate-300 mb-1">Nombre</label>
+        <!-- TODO: Añade clases base (w-full, rounded-lg, border, px-3, py-2) y el estado focus (ring azul) -->
+        <input id="first-name" name="first-name" type="text" placeholder="Ej. Ada" class="bg-slate-800 border-slate-700 text-white">
+      </div>
+
+      <!-- Apellido -->
+      <div>
+        <label for="last-name" class="block text-sm font-medium text-slate-300 mb-1">Apellido</label>
+        <input id="last-name" name="last-name" type="text" placeholder="Ej. Lovelace" class="w-full rounded-lg bg-slate-800 border border-slate-700 px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Correo -->
+      <!-- TODO: Haz que este contenedor ocupe las 2 columnas en pantallas md usando md:col-span-2 -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-slate-300 mb-1">Correo Electrónico</label>
+        <input id="email" name="email" type="email" placeholder="ada@deeplearning.ai" class="w-full rounded-lg bg-slate-800 border border-slate-700 px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+        
+        <!-- TODO: Simula un estado de error cambiando el texto de ayuda a color rojo (text-sm text-red-600) si el correo no es válido -->
+        <p class="text-xs text-slate-500 mt-1">Ingresa un correo corporativo válido.</p>
+      </div>
+
+      <!-- Campo Deshabilitado -->
+      <!-- TODO: Haz que ocupe las 2 columnas y aplica clases para estado deshabilitado (disabled:opacity-50 disabled:cursor-not-allowed) -->
+      <div class="md:col-span-2">
+        <label for="legacy" class="block text-sm font-medium text-slate-500 mb-1">Campo Bloqueado</label>
+        <input id="legacy" type="text" value="No editable" disabled class="w-full rounded-lg bg-slate-900 border border-slate-800 px-3 py-2 text-slate-600">
+      </div>
+
+      <!-- Botón de Envío -->
+      <!-- TODO: Haz que el botón ocupe las 2 columnas en md y añade clases de fondo, hover y transición -->
+      <button type="submit" class="md:col-span-2 w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-2.5 rounded-lg transition-colors cursor-pointer">
+        Enviar Formulario
+      </button>
+    </form>
+  </div>
+
+</body>
+</html>

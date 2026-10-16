@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playground de Prompt - IA Engineer</title>
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen flex items-center justify-center p-4">
+
+  <div class="w-full max-w-xl bg-gray-900 border border-gray-800 rounded-2xl p-6 shadow-2xl">
+    <header class="mb-6">
+      <h1 class="text-2xl font-bold tracking-tight text-white">Playground de Inferencia</h1>
+      <p class="text-sm text-gray-400 mt-1">Configura tu modelo y envía un prompt para evaluar la respuesta.</p>
+    </header>
+
+    <!-- Formulario Principal -->
+    <form id="prompt-form" class="space-y-4">
+      <div>
+        <label for="model" class="block text-sm font-medium text-gray-300 mb-1">Modelo de IA</label>
+        <select id="model" name="model" class="w-full rounded-lg bg-gray-800 border border-gray-700 px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="gpt-4o-mini">GPT-4o Mini (Rápido y ligero)</option>
+          <option value="gpt-4o">GPT-4o (Avanzado y multimodal)</option>
+          <option value="claude-3-5-sonnet">Claude 3.5 Sonnet (Razonamiento complejo)</option>
+        </select>
+      </div>
+
+      <div>
+        <div class="flex justify-between items-center mb-1">
+          <label for="prompt" class="block text-sm font-medium text-gray-300">Tu Prompt</label>
+          <span id="char-count" class="text-xs text-gray-500">0 / 500 caracteres</span>
+        </div>
+        <textarea id="prompt" name="prompt" rows="4" maxlength="500" placeholder="Escribe tu instrucción o contexto aquí..." class="w-full rounded-lg bg-gray-800 border border-gray-700 px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none" required></textarea>
+      </div>
+
+      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-2.5 rounded-lg transition-colors cursor-pointer">
+        Enviar Prompt
+      </button>
+    </form>
+
+    <!-- Contenedor de Resultado Simulado -->
+    <div id="result-container" class="mt-6 hidden border-t border-gray-800 pt-4">
+      <h2 class="text-sm font-semibold text-gray-400 mb-2">Respuesta del Modelo:</h2>
+      <div id="result-box" class="bg-gray-950 border border-gray-800 rounded-lg p-4 text-sm text-gray-300 font-mono whitespace-pre-wrap"></div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('prompt-form');
+    const promptInput = document.getElementById('prompt');
+    const charCount = document.getElementById('char-count');
+    const resultContainer = document.getElementById('result-container');
+    const resultBox = document.getElementById('result-box');
+
+    // Evento dinámico: Contar caracteres en vivo
+    promptInput.addEventListener('input', (e) => {
+      const length = e.target.value.length;
+      charCount.textContent = `${length} / 500 caracteres`;
+    });
+
+    // Evento submit: Capturar datos y simular llamada a API de IA
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); // Evita que la página se recargue
+
+      const selectedModel = document.getElementById('model').value;
+      const promptText = promptInput.value.trim();
+
+      if (!promptText) return;
+
+      // Mostrar estado de carga simulado
+      resultContainer.classList.remove('hidden');
+      resultBox.textContent = `[Conectando con ${selectedModel}...]`;
+
+      setTimeout(() => {
+        resultBox.textContent = `[Respuesta generada exitosamente]\n\nHas consultado al modelo "${selectedModel}" con la siguiente instrucción:\n> "${promptText}"\n\nAquí se renderizaría la respuesta en streaming o texto completo devuelta por la API de inferencia.`;
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
