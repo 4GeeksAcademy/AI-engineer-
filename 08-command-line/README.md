@@ -30,17 +30,6 @@ SERVIDOR FÍSICO (un edificio en un datacenter)
 └──────────────────────────────────────────────────┘
 ```
 
-### Tu laptop vs. tu VPS
-
-| Tu laptop | Tu VPS |
-| --- | --- |
-| En tu casa | En un datacenter |
-| No | Sí, 24/7 |
-| Normalmente no | Sí |
-| Sí | No: se maneja por terminal |
-| Los que compraste | Los que contratas por mes |
-| Desarrollar | Publicar APIs, bots, apps, modelos |
-
 ### Radiografía de un plan de VPS
 
 Cuando contrates uno, verás algo así. Cada parte significa algo concreto:
