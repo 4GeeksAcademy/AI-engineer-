@@ -276,7 +276,7 @@ Editar archivos con `nano` sirve para arreglos rápidos, pero para un proyecto r
 
 En lugar de recordar IPs y usuarios, dale un apodo a tu servidor:
 
-```sshconfig
+```text
 Host mi-vps
     HostName 203.0.113.10
     User deploy
@@ -294,7 +294,7 @@ Y en VS Code, `mi-vps` aparecerá directamente en la lista de hosts.
 | --- | --- |
 | `nano` | Editor completo con colores y búsqueda |
 | `ls` y `cd` | Panel lateral con el árbol |
-| La única ventana | Integrada (`Ctrl+ñ` o `Ctrl+ `) |
+| La única ventana | Integrada (`Ctrl+ñ` o `Ctrl+~`) |
 | No aplica | Se instalan en el servidor |
 
 Un detalle importante: al conectarte, VS Code instala un pequeño componente de servidor en tu VPS y lo mantiene corriendo. En un servidor con poca memoria eso se nota. Es el puente perfecto hacia la siguiente parte.
