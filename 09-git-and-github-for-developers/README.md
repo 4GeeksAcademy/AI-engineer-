@@ -51,14 +51,7 @@ Un solo archivo, y el historial responde las tres preguntas: **qué** cambió, *
 
 Este es el mapa más importante del módulo. Los cambios viajan por cuatro zonas, y cada comando mueve cambios de una zona a la siguiente.
 
-```
-  ① CARPETA DE      ② STAGING        ③ REPOSITORIO     ④ REMOTO
-     TRABAJO           (área de          LOCAL             (GitHub)
-  (archivos)          preparación)    (.git, historial)
-
-  se edita ──────► git add ──────► git commit ──────► git push
-        ◄─────────────────────────────── git pull / git fetch
-```
+![git-state](../00-assets/img/git-state.png)
 
 | Zona | Qué contiene | Cómo se ve |
 |---|---|---|
